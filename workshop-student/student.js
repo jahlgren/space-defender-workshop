@@ -1,4 +1,3 @@
-"use strict";
 // ===========================================================
 // SPACE DEFENDER - HÄR PROGRAMMERAR DU!
 // Följ uppgift 1-7 i PDF-filen. Ändra INTE engine.js.
