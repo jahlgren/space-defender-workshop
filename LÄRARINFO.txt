@@ -1,0 +1,13 @@
+SPACE DEFENDER - LÄRARINFO
+
+Tid: 20-30 min programmering. Uppgift 1-5 prioriteras om tiden ar knapp.
+
+1. Dela ut mappen workshop-student och Space_Defender_Workshop.pdf (kan skrivas ut).
+2. Visa versionen i workshop-teacher innan studeranden börjar.
+3. Studeranden oppnar index.html med LiveServer.
+4. Studeranden skriver kod i student.js och sparar med CTRL + S.
+5. Ändringar uppdateras automatiskt via LiveServer.
+6. Varje fiende har 2 HP. Nar en fiende passerar botten ar spelet slut.
+7. Ljud fungerar efter tangenttryckning i webbläsaren.
+8. Återställ workshop-student genom att ta bort filerna i mappen och kopiera
+   dit filerna från workshop-student-bkp.
