@@ -9,11 +9,11 @@
 function updatePlayer(dt) {
   // Skriv din kod här.
   if(isKeyDown("ArrowLeft")) {
-    player.x -= 225 * dt
+    player.x -= 250 * dt
   }
 
   if(isKeyDown("ArrowRight")) {
-    player.x += 225 * dt
+    player.x += 250 * dt
   }
 
   player.x = Math.max(0, Math.min(player.x, width))
@@ -38,7 +38,7 @@ function playerShoot(dt) {
     if (shootTimer <= 0) {
       const bullet1 = spawnBullet(player.x - 12, player.y - player.h / 2)
       const bullet2 = spawnBullet(player.x + 12, player.y - player.h / 2)
-      shootTimer = 0.15
+      shootTimer = 0.1
 
       playSound("shoot")
     }
@@ -57,16 +57,24 @@ function updateBullets(dt) {
 function updateEnemies(dt) {
   // Skriv din kod här.
 
+  const letters = "0123456789ABCDEF"
+
   enemyTimer += dt
-  if (enemyTimer >= 0.75) {
+  if (enemyTimer >= 0.4) {
     const enemy = spawnEnemy()
+    
+    let color = "#"
+    for(let i = 0;i<6;i++) {
+        color += letters[(Math.floor(Math.random()*16))]
+    }
+    enemy.color = color
+    
     if (Math.random() < 0.25) {
       enemy.hp = 12
       enemy.maxHp = 12
       enemy.w *= 2
-      enemy.color = "#f6c72a"
     }
-    enemyTimer -= 0.75
+    enemyTimer -= 0.4
   }
 }
 
